@@ -1,0 +1,131 @@
+.wrapper {
+    padding: 24px 0 64px 0;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    background-color: #f2f4f8;
+}
+
+.container {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #dee2e6;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.header-slogan {
+    margin-right: 80px;
+}
+
+.header-slogan,
+.header-item {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #292929;
+}
+
+.header-item:nth-child(1) {
+    margin-right: 80px;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.header-item:nth-child(2) {
+    padding: 8px 0;
+    color: var(--red);
+    border-bottom: 3px solid var(--red);
+    cursor: pointer;
+}
+
+.header-list {
+    list-style: none;
+    display: flex;
+}
+
+.content {
+    padding: 16px 0;
+    display: flex;
+}
+
+.product-item {
+    width: 25%;
+    padding: 8px 15px;
+}
+
+.wrapper-item {
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    background-color: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.item-img {
+    overflow: hidden;
+    width: 100%;
+}
+
+.img {
+    max-width: 100%;
+    max-height: 210px;
+    min-height: 150px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    object-fit: cover;
+    transition: all 0.5s;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.body {
+    padding: 16px 10px 20px 8px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.name {
+    text-transform: uppercase;
+    color: #0078ae;
+    line-height: 24px;
+    letter-spacing: 0.8px;
+    margin-bottom: 0.8rem;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.price {
+    font-style: normal;
+    font-weight: 800;
+    line-height: 20px;
+    color: #25282d;
+}
+
+.more-btn {
+    padding-top: 16px;
+}
+
+.more {
+    color: #fff;
+    background-color: #0078ae;
+    border: none;
+    cursor: pointer;
+    padding: 12px 16px;
+    font-weight: 800;
+    font-size: 16px;
+    border-radius: 5px;
+    line-height: 1.5;
+}

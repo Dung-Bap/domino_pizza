@@ -1,0 +1,14 @@
+.wrapper {
+    padding-top: 80px;
+}
+
+.banner {
+    padding: 24px 0 24px 0;
+}
+
+.banner-item {
+    border-radius: 1rem;
+    object-fit: cover;
+    padding: 0 12px;
+    height: calc(100vh - 193px) !important;
+}

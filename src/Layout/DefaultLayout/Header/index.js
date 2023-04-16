@@ -1,5 +1,51 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import classNames from 'classnames/bind';
+import styles from './Header.module.scss';
+import { faBasketShopping, faUserAlt } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
+
+const cx = classNames.bind(styles);
+
 function Header() {
-    return <header> Header </header>;
+    return (
+        <nav className={cx('wrapper')}>
+            <Link to={'/'}>
+                <img className={cx('logo')} src="https://dominos.vn/img/logo/domino-horizontal-dark.svg" alt="" />
+            </Link>
+            <div className={cx('nav')}>
+                <div className={cx('nav-list')}>
+                    <Link to={'/voucher'}>
+                        <div className={cx('nav-item')}>MÃ E-VOUCHER</div>
+                    </Link>
+                    <Link to={'/promotion'}>
+                        <div className={cx('nav-item')}>KHUYẾN MÃI</div>
+                    </Link>
+                    <Link>
+                        <div className={cx('nav-item')}>THỰC ĐƠN</div>
+                    </Link>
+                    <Link>
+                        <div className={cx('nav-item')}>THEO DÕI ĐƠN HÀNG</div>
+                    </Link>
+                    <Link>
+                        <div className={cx('nav-item')}>DANH SÁCH CỬA HÀNG</div>
+                    </Link>
+                    <Link>
+                        <div className={cx('nav-item')}>BLOG</div>
+                    </Link>
+                </div>
+            </div>
+            <div className={cx('language')}>
+                <img className={cx('img-1')} src="https://dominos.vn/img/icon/flag-vn.png" alt="" />
+                <img className={cx('img-2')} src="https://dominos.vn/img/icon/flag-en.png" alt="" />
+            </div>
+            <div className={cx('nav-right')}>
+                <FontAwesomeIcon className={cx('icon')} icon={faUserAlt} />
+                <FontAwesomeIcon className={cx('icon')} icon={faBasketShopping} />
+                <span className={cx('notify-cart')}>0</span>
+            </div>
+        </nav>
+    );
 }
 
 export default Header;

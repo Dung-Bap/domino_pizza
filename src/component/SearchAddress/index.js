@@ -1,0 +1,29 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import classNames from 'classnames/bind';
+import styles from './SearchAddress.module.scss';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+
+const cx = classNames.bind(styles);
+
+function SearchAddress() {
+    return (
+        <div className={cx('wrapper')}>
+            <div className={cx('container')}>
+                <ul className={cx('label')}>
+                    <li className={cx('label-item')}>Giao hàng tận nơi</li>
+                    <li className={cx('label-item')}>Đặt đến lấy</li>
+                </ul>
+                <div className={cx('wrapper-from')}>
+                    <form className={cx('form')}>
+                        <div className={cx('wrapper-content')}>
+                            <input className={cx('input')} placeholder="Vui lòng nhập địa chỉ nhận hàng" />
+                            <FontAwesomeIcon className={cx('icon')} icon={faSearch} />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+export default SearchAddress;
