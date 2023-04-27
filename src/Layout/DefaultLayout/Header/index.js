@@ -21,10 +21,10 @@ function Header() {
                     <Link to={'/promotion'}>
                         <div className={cx('nav-item')}>KHUYẾN MÃI</div>
                     </Link>
-                    <Link>
+                    <Link to={'/product'}>
                         <div className={cx('nav-item')}>THỰC ĐƠN</div>
                     </Link>
-                    <Link>
+                    <Link to={'/tracking'}>
                         <div className={cx('nav-item')}>THEO DÕI ĐƠN HÀNG</div>
                     </Link>
                     <Link>
