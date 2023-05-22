@@ -5,9 +5,19 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 const cx = classNames.bind(styles);
 
-function SearchAddress() {
+function SearchAddress({ className, primary = false, small = false, ...passProps }) {
+    const props = {
+        ...passProps,
+    };
+
+    const classes = cx('wrapper', {
+        [className]: className,
+        primary,
+        small,
+    });
+
     return (
-        <div className={cx('wrapper')}>
+        <div className={classes} {...props}>
             <div className={cx('container')}>
                 <ul className={cx('label')}>
                     <li className={cx('label-item')}>Giao hàng tận nơi</li>

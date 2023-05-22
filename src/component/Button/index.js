@@ -4,7 +4,17 @@ import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
-function Button({ children, to, href, onClick, small = false, large = false, primary = false, ...passProps }) {
+function Button({
+    className,
+    children,
+    to,
+    href,
+    onClick,
+    small = false,
+    large = false,
+    primary = false,
+    ...passProps
+}) {
     let Comp = 'button';
     const props = {
         onClick,
@@ -19,6 +29,7 @@ function Button({ children, to, href, onClick, small = false, large = false, pri
         Comp = 'a';
     }
     const classes = cx('wrapper', {
+        [className]: className,
         primary,
         small,
         large,

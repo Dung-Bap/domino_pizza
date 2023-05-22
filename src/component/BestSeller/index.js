@@ -1,5 +1,6 @@
 import classNames from 'classnames/bind';
 import styles from './BestSeller.module.scss';
+import { Link, NavLink } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
@@ -10,7 +11,14 @@ function BestSeller() {
                 <div className={cx('header')}>
                     <h4 className={cx('header-slogan')}>Hôm Nay Ăn Gì ?</h4>
                     <ul className={cx('header-list')}>
-                        <li className={cx('header-item')}>Khuyến Mãi Mỗi Ngày</li>
+                        <NavLink
+                            style={({ isActive }) => ({
+                                color: isActive ? '#e31837' : '#25282d',
+                            })}
+                            to={'/promotion'}
+                        >
+                            <li className={cx('header-item')}>Khuyến Mãi Mỗi Ngày</li>
+                        </NavLink>
                         <li className={cx('header-item')}>Best sellers</li>
                     </ul>
                 </div>
@@ -89,7 +97,10 @@ function BestSeller() {
                     </div>
                 </div>
                 <div className={cx('more-btn')}>
-                    <button className={cx('more')}>Xem Thêm</button>
+                    <Link to={'/product/pizza'}>
+                        {' '}
+                        <button className={cx('more')}>Xem Thêm</button>
+                    </Link>
                 </div>
             </div>
         </div>

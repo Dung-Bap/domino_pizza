@@ -1,0 +1,20 @@
+.wrapper {
+    display: flex;
+    padding-top: var(--height-header);
+}
+
+.header {
+    width: calc(100% - 396px);
+    padding: 0 15px;
+    background-color: #f2f4f8;
+    border-right: 1px solid #dee2e6;
+    height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 100%;
+    background-color: #f2f4f8;
+    border-right: 1px solid #dee2e6;
+}

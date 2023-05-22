@@ -1,0 +1,19 @@
+.category {
+    border-bottom: 1px solid #dee2e6;
+    background-color: #fff;
+    border-color: #dfe4ea;
+    margin: 0 -15px;
+}
+
+.category_list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 87px;
+    padding: 0 26px;
+    cursor: pointer;
+}
+
+.category_item {
+    padding: 8px 16px;
+}

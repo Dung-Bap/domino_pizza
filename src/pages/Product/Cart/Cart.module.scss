@@ -1,0 +1,28 @@
+.cart {
+    right: 0;
+    max-width: 396px;
+    height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+}
+
+.cart_item {
+    text-align: center;
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.cart_img {
+    max-width: 100%;
+    height: auto;
+}
+
+.cart_text {
+    color: #25282d;
+    font-weight: 800;
+    font-size: 1.6rem;
+}
