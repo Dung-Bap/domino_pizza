@@ -2,16 +2,45 @@
     user-select: none;
     margin-right: 8px;
     margin-bottom: 8px;
-    + .wrapper {
-        margin-right: 8px;
-        margin-bottom: 8px;
-    }
 }
 
 .primary {
+    cursor: pointer;
+    color: #fff;
+    background-color: #e31837;
+    border-color: #e31837;
+    font-size: 400;
+    text-align: center;
+    border: none;
+    padding: 6px 12px;
+    line-height: 1.5;
+    border-radius: 8px;
+    user-select: none;
+
+    &:hover {
+        color: #fff;
+        background-color: #c0142f;
+        border-color: #b5132c;
+    }
 }
 
 .small {
+    cursor: pointer;
+    font-size: 400;
+    text-align: center;
+    border: none;
+    padding: 6px 12px;
+    line-height: 1.5;
+    border-radius: 8px;
+    color: #212529;
+    background-color: #fff;
+    user-select: none;
+    border: 1px solid #dee2e6;
+
+    &:hover {
+        color: #212529;
+        background-color: #ececec;
+    }
 }
 
 .large {

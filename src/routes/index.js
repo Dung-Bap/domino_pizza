@@ -1,4 +1,4 @@
-import Home from '~/pages/Home';
+import Home from '~/pages/Home/Home';
 import Voucher from '~/pages/Voucher';
 // import Product from '~/pages/Product/Product';
 import HeaderOnly from '~/Layout/HeaderOnly';
