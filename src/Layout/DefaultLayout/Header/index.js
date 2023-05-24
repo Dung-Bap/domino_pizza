@@ -30,7 +30,7 @@ function Header() {
                     <Link to={'/store'}>
                         <div className={cx('nav-item')}>DANH SÁCH CỬA HÀNG</div>
                     </Link>
-                    <Link>
+                    <Link to={'/blog'}>
                         <div className={cx('nav-item')}>BLOG</div>
                     </Link>
                 </div>
@@ -41,7 +41,10 @@ function Header() {
             </div>
             <div className={cx('nav-right')}>
                 <FontAwesomeIcon className={cx('icon')} icon={faUserAlt} />
-                <FontAwesomeIcon className={cx('icon')} icon={faBasketShopping} />
+                <Link to={'/cart'}>
+                    {' '}
+                    <FontAwesomeIcon className={cx('icon')} icon={faBasketShopping} />
+                </Link>
                 <span className={cx('notify-cart')}>0</span>
             </div>
         </nav>
