@@ -18,7 +18,7 @@ function Tracking() {
                         <h4 className={cx('text')}>Theo Dõi Đơn Hàng - Domino's Pizza Việt Nam</h4>
                         <div className={cx('search')}>
                             <input type="text" placeholder="Nhập số điện thoại của bạn" />
-                            <p>
+                            <p className={cx('btn')}>
                                 <FontAwesomeIcon className={cx('btn-search')} icon={faSearch} />
                             </p>
                         </div>

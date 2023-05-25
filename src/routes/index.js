@@ -1,7 +1,6 @@
 import Home from '~/pages/Home/Home';
 import Voucher from '~/pages/Voucher';
 // import Product from '~/pages/Product/Product';
-import HeaderOnly from '~/Layout/HeaderOnly';
 import Promotion from '~/pages/Promotion';
 import Tracking from '~/pages/Tracking';
 import Store from '~/pages/Store/Store';

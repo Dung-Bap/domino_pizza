@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
-function Header() {
+function Header({ handleOverLay }) {
     return (
         <nav className={cx('wrapper')}>
             <Link to={'/'}>
@@ -40,7 +40,7 @@ function Header() {
                 <img className={cx('img-2')} src="https://dominos.vn/img/icon/flag-en.png" alt="" />
             </div>
             <div className={cx('nav-right')}>
-                <FontAwesomeIcon className={cx('icon')} icon={faUserAlt} />
+                <FontAwesomeIcon onClick={handleOverLay} className={cx('icon')} icon={faUserAlt} />
                 <Link to={'/cart'}>
                     {' '}
                     <FontAwesomeIcon className={cx('icon')} icon={faBasketShopping} />

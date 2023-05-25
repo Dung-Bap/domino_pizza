@@ -1,0 +1,30 @@
+.wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 16px;
+    margin-bottom: 8px;
+    border: 2px solid #e0e2ec;
+    border-radius: 4px;
+}
+
+.icon {
+    font-size: 2rem;
+}
+
+.content {
+    padding-left: 16px;
+}
+
+.name {
+    margin-bottom: 4px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.time,
+.adress {
+    line-height: 1.2;
+    color: #858891;
+    margin-bottom: 4px;
+}
