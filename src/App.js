@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { publishRoutes } from '~/routes';
 import DefaultLayout from './Layout/DefaultLayout';
+import Modal from './component/Modal/Modal';
 
 function App() {
     return (
@@ -30,6 +31,7 @@ function App() {
                     })}
                 </Routes>
             </div>
+            <Modal />
         </BrowserRouter>
     );
 }

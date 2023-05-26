@@ -1,10 +1,25 @@
-import { createContext } from 'react';
+import { createContext, useState } from 'react';
 
-function Context() {
-    // eslint-disable-next-line no-unused-vars
-    const environment = createContext();
+export const ModalEnvironment = createContext();
 
-    return <></>;
+function ModalProvider({ children }) {
+    const [show, setShow] = useState(false);
+
+    const handleShowModal = () => {
+        setShow(true);
+    };
+
+    const handleHideModal = () => {
+        setShow(false);
+    };
+
+    const value = {
+        handleShowModal,
+        handleHideModal,
+        show,
+    };
+
+    return <ModalEnvironment.Provider value={value}>{children}</ModalEnvironment.Provider>;
 }
 
-export default Context;
+export default ModalProvider;

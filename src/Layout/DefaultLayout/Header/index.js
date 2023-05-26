@@ -4,10 +4,14 @@ import classNames from 'classnames/bind';
 import styles from './Header.module.scss';
 import { faBasketShopping, faUserAlt } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { ModalEnvironment } from '~/component/Context/Context';
 
 const cx = classNames.bind(styles);
 
-function Header({ handleOverLay }) {
+function Header() {
+    const ModalContext = useContext(ModalEnvironment);
+
     return (
         <nav className={cx('wrapper')}>
             <Link to={'/'}>
@@ -40,7 +44,7 @@ function Header({ handleOverLay }) {
                 <img className={cx('img-2')} src="https://dominos.vn/img/icon/flag-en.png" alt="" />
             </div>
             <div className={cx('nav-right')}>
-                <FontAwesomeIcon onClick={handleOverLay} className={cx('icon')} icon={faUserAlt} />
+                <FontAwesomeIcon onClick={ModalContext.handleShowModal} className={cx('icon')} icon={faUserAlt} />
                 <Link to={'/cart'}>
                     {' '}
                     <FontAwesomeIcon className={cx('icon')} icon={faBasketShopping} />
