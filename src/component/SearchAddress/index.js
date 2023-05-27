@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames/bind';
 import styles from './SearchAddress.module.scss';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { NavLink } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
@@ -19,10 +20,10 @@ function SearchAddress({ className, primary = false, small = false, ...passProps
     return (
         <div className={classes} {...props}>
             <div className={cx('container')}>
-                <ul className={cx('label')}>
-                    <li className={cx('label-item')}>Giao hàng tận nơi</li>
-                    <li className={cx('label-item')}>Đặt đến lấy</li>
-                </ul>
+                <div className={cx('label')}>
+                    <div className={cx('label-item')}>Giao hàng tận nơi</div>
+                    <div className={cx('label-item')}>Đặt đến lấy</div>
+                </div>
                 <div className={cx('wrapper-from')}>
                     <form className={cx('form')}>
                         <div className={cx('wrapper-content')}>

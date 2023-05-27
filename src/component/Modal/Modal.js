@@ -5,7 +5,7 @@ import { createPortal } from 'react-dom';
 import classNames from 'classnames/bind';
 import styles from './Modal.module.scss';
 import ModalLogin from './ModalLogin/ModalLogin';
-import ModalCreateAccount from './ModalCreateAccount/ModalCreateAccount';
+import ModalRegister from './ModalRegister/ModalRegister';
 
 const cx = classNames.bind(styles);
 
@@ -28,7 +28,7 @@ function Modal() {
                     <div className={cx('wrapper')} onClick={ModalContext.handleHideModal}>
                         <div className={cx('ahihi')}>
                             {login ? (
-                                <ModalCreateAccount onHideAccount={handleHideAccount} />
+                                <ModalRegister onHideAccount={handleHideAccount} />
                             ) : (
                                 <ModalLogin onHideLogin={handleHideLogin} />
                             )}
