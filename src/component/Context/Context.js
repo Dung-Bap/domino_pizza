@@ -14,14 +14,20 @@ function ModalProvider({ children }) {
         setShow(false);
     };
 
-    const handleShowModalMenu = () => {
+    const handleShowModalMenu = (e) => {
+        e.stopPropagation();
         setShowMenu(!showMenu);
+    };
+
+    const handleHideModalMenu = () => {
+        setShowMenu(false);
     };
 
     const value = {
         handleShowModal,
         handleHideModal,
         handleShowModalMenu,
+        handleHideModalMenu,
         show,
         showMenu,
     };

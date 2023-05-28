@@ -21,7 +21,7 @@ function Header() {
     const ModalContext = useContext(ModalEnvironment);
 
     return (
-        <nav className={cx('wrapper')}>
+        <nav className={cx('wrapper')} onClick={ModalContext.handleHideModalMenu}>
             <Link to={'/'}>
                 <img
                     className={cx('logo', 'hide-on-mobile')}

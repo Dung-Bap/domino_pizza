@@ -125,7 +125,7 @@ function ModalRegister({ onHideAccount }) {
                         />
                     </Form.Item>
                     <Form.Item>
-                        <Button htmlType="submit" className={cx('btn')} primary>
+                        <Button htmltype="submit" className={cx('btn')} primary>
                             Tạo tài khoản
                         </Button>
                     </Form.Item>

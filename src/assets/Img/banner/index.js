@@ -1,7 +1,7 @@
 export const bannerImg = [
     {
         id: 1,
-        linkImg: 'https://img.dominos.vn/banner+web+LTO.jpg',
+        linkImg: 'https://img.dominos.vn/DomioPizza_BGCP_KV_WebsiteBanner+(1).jpg',
     },
     {
         id: 2,
