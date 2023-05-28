@@ -53,7 +53,7 @@ function ModalRegister({ onHideAccount }) {
                         name="phone"
                         rules={[
                             {
-                                // type: 'number',
+                                type: 'string',
                                 min: 10,
                                 max: 10,
                                 message: 'Số điện thoại không tồn tại!',

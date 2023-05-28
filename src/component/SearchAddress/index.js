@@ -2,7 +2,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames/bind';
 import styles from './SearchAddress.module.scss';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import { NavLink } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
