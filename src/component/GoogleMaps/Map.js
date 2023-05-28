@@ -31,7 +31,7 @@ function Map() {
 
     return (
         // Important! Always set the container height explicitly
-        <div style={{ height: '480px', width: '100%' }}>
+        <div className={cx('wrapper')}>
             <GoogleMapReact
                 bootstrapURLKeys={{ key: 'AIzaSyD6EjRVGGUK_wbdAvRmzZKBx4RSFThf7BA' }}
                 defaultZoom={defaultProps.zoom}

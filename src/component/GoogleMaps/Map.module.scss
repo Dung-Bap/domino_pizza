@@ -2,3 +2,14 @@
     font-size: 3rem;
     color: rgb(218, 8, 8);
 }
+
+.wrapper {
+    height: 480px;
+    width: 100%;
+}
+
+@media only screen and (max-width: 46.1875em) {
+    .wrapper {
+        height: 300px;
+    }
+}

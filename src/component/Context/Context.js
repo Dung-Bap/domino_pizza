@@ -4,6 +4,7 @@ export const ModalEnvironment = createContext();
 
 function ModalProvider({ children }) {
     const [show, setShow] = useState(false);
+    const [showMenu, setShowMenu] = useState(false);
 
     const handleShowModal = () => {
         setShow(true);
@@ -13,10 +14,16 @@ function ModalProvider({ children }) {
         setShow(false);
     };
 
+    const handleShowModalMenu = () => {
+        setShowMenu(!showMenu);
+    };
+
     const value = {
         handleShowModal,
         handleHideModal,
+        handleShowModalMenu,
         show,
+        showMenu,
     };
 
     return <ModalEnvironment.Provider value={value}>{children}</ModalEnvironment.Provider>;

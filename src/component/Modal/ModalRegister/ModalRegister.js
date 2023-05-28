@@ -53,12 +53,18 @@ function ModalRegister({ onHideAccount }) {
                         name="phone"
                         rules={[
                             {
+                                // type: 'number',
+                                min: 10,
+                                max: 10,
+                                message: 'Số điện thoại không tồn tại!',
+                            },
+                            {
                                 required: true,
                                 message: 'Vui lòng nhập số điện thoại của bạn!',
                             },
                         ]}
                     >
-                        <Input className={cx('input')} type="password" placeholder="Nhập số điện thoại của bạn" />
+                        <Input className={cx('input')} placeholder="Nhập số điện thoại của bạn" />
                     </Form.Item>
                     <span className={cx('name')}>Email</span>
                     <Form.Item
@@ -74,19 +80,24 @@ function ModalRegister({ onHideAccount }) {
                             },
                         ]}
                     >
-                        <Input className={cx('input')} type="password" placeholder="Nhập email của bạn" />
+                        <Input className={cx('input')} placeholder="Nhập email của bạn" />
                     </Form.Item>
                     <span className={cx('name')}>Mật khẩu</span>
                     <Form.Item
                         name="password"
+                        style={{ width: '308px' }}
                         rules={[
                             {
                                 required: true,
                                 message: 'Vui lòng nhập mật khẩu!',
                             },
+                            {
+                                min: 8,
+                                message: 'Mật khẩu ít nhất là 8 kí tự gồm chữ hoa, chữ thường, số và kí tự đặc biệt!',
+                            },
                         ]}
                     >
-                        <Input className={cx('input')} type="password" placeholder="Nhập mật khẩu" />
+                        <Input.Password className={cx('input')} type="password" placeholder="Nhập mật khẩu" />
                     </Form.Item>
                     <span className={cx('name')}>Xác nhận mật khẩu</span>
                     <Form.Item
@@ -107,7 +118,11 @@ function ModalRegister({ onHideAccount }) {
                             }),
                         ]}
                     >
-                        <Input className={cx('input')} type="password" placeholder="Xác nhận mật khẩu của bạn" />
+                        <Input.Password
+                            className={cx('input')}
+                            type="password"
+                            placeholder="Xác nhận mật khẩu của bạn"
+                        />
                     </Form.Item>
                     <Form.Item>
                         <Button htmlType="submit" className={cx('btn')} primary>

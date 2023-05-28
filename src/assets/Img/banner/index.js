@@ -1,7 +1,7 @@
 export const bannerImg = [
     {
         id: 1,
-        linkImg: 'https://img.dominos.vn/Banner+web_PC+Bogo+3_THANG+3-2023-03.jpg',
+        linkImg: 'https://img.dominos.vn/banner+web+LTO.jpg',
     },
     {
         id: 2,

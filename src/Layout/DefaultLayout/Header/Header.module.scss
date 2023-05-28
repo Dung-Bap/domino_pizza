@@ -17,6 +17,38 @@
     cursor: pointer;
 }
 
+.logo2 {
+    display: none;
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+}
+
+.logo-bike {
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 9px 12px;
+    cursor: pointer;
+    &:hover {
+        background-color: #00628f;
+    }
+}
+
+.logo-menu,
+.logo-sale,
+.logo-menu-list {
+    color: #fff;
+    display: none;
+    width: 24px;
+    height: 24px;
+    padding: 12px 12px;
+    cursor: pointer;
+    &:hover {
+        background-color: #00628f;
+    }
+}
+
 .nav-list {
     display: flex;
     align-items: center;
@@ -54,7 +86,7 @@
 }
 
 .icon {
-    cursor: pointer;
+    position: relative;
     color: var(--white);
     width: 3rem;
     height: 3.2rem;
@@ -74,4 +106,60 @@
     background-color: #aa1934;
     border-radius: 3px;
     color: #fff;
+}
+
+@media only screen and (max-width: 46.1875em) {
+    .hide-on-mobile {
+        display: none;
+    }
+    .wrapper {
+        height: 48px;
+    }
+    .icon {
+        padding: 13px 12px;
+        width: 2.2rem;
+        height: auto;
+    }
+    .notify-cart {
+        right: 66px;
+        top: 4px;
+        padding: 0px 4px;
+        font-size: 1rem;
+    }
+    .logo2,
+    .logo-menu,
+    .logo-sale,
+    .logo-bike,
+    .logo-menu-list {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+    .hide-on-tablet {
+        display: none;
+    }
+    .logo {
+        width: 76px;
+    }
+    .nav-item {
+        padding: 2px 4px;
+    }
+    .icon {
+        padding: 26px 16px;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    .notify-cart {
+        right: 23px;
+        top: 20px;
+        padding: 0px 4px;
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (min-width: 64em) {
+    .hide-on-tablet-mobile {
+        display: none;
+    }
 }

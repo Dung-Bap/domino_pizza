@@ -59,3 +59,21 @@
     color: #25282d;
     margin-bottom: 0;
 }
+
+@media only screen and (max-width: 46.1875em) {
+    .hide-on-mobile {
+        display: none;
+    }
+    .product-item {
+        width: 100%;
+    }
+    .wrapper-item {
+        width: 230px;
+    }
+}
+
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+    .body {
+        padding: 0;
+    }
+}

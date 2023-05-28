@@ -75,3 +75,10 @@
     padding: 10px 16px;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 46.1875em) {
+    .body {
+        min-width: 100%;
+        padding: 10px 12px;
+    }
+}

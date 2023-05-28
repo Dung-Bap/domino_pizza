@@ -76,3 +76,37 @@
         border-color: #00557b;
     }
 }
+
+@media only screen and (max-width: 46.1875em) {
+    .hide-on-mobile {
+        display: none;
+    }
+    .header-item:nth-child(1),
+    .header-slogan {
+        margin-right: 0;
+    }
+    .content {
+        overflow: auto;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+    .wrapper {
+        padding: 24px 0 24px 0;
+    }
+    .more-btn {
+        padding-top: 0;
+    }
+}
+
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+    .hide-on-tablet {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 64em) {
+    .hide-on-tablet-mobile {
+        display: none;
+    }
+}

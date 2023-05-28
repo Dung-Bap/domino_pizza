@@ -18,3 +18,20 @@
     background-color: #f2f4f8;
     border-right: 1px solid #dee2e6;
 }
+
+@media only screen and (max-width: 46.1875em) {
+    .wrapper {
+        padding-top: 48px;
+    }
+    .header {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+    .header {
+        width: 100%;
+        padding: 0;
+    }
+}

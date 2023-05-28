@@ -1,6 +1,4 @@
 .wrapper {
-    padding-top: var(--height-header);
-    display: flex;
     justify-content: center;
 }
 
@@ -18,6 +16,18 @@
     margin-bottom: 20px;
 }
 
+.footer {
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
 .btn {
     margin-bottom: 30px;
+}
+
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+    .wrapper {
+        padding-top: 66px;
+    }
 }

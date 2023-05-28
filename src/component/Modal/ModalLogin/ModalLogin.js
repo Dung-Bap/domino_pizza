@@ -62,7 +62,7 @@ function ModalLogin({ onHideLogin }) {
                             },
                         ]}
                     >
-                        <Input className={cx('input')} type="password" placeholder="Nhập mật khẩu" />
+                        <Input.Password className={cx('input')} type="password" placeholder="Nhập mật khẩu" />
                     </Form.Item>
                     <Form.Item>
                         <Button htmlType="submit" className={cx('btn')} primary>

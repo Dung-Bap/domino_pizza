@@ -17,7 +17,7 @@ function CartItem() {
                                 <div className="d-flex justify-content-center">
                                     <Image src={'https://dominos.vn/img/illustration/empty-cart.svg'} />
                                 </div>
-                                <div className="text-center text-grey-darker">
+                                <div className={cx('footer')}>
                                     <h3 className={cx('title')}>Giỏ hàng trống</h3>
                                     <p className={cx('description')}>
                                         Hiện tại bạn chưa có sản phẩm nào trong giỏ hàng. Hãy dạo một vòng Thực đơn để

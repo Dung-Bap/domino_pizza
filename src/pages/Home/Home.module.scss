@@ -3,12 +3,34 @@
 }
 
 .banner {
-    padding: 24px 0 24px 0;
+    padding: 24px 0;
 }
 
 .banner-item {
-    border-radius: 1rem;
+    border-radius: 0.3rem;
     object-fit: cover;
     padding: 0 12px;
-    height: calc(100vh - 193px) !important;
+    height: calc(100vh - 193px);
+}
+
+@media only screen and (max-width: 46.1875em) {
+    .hide-on-mobile {
+        display: none;
+    }
+    .wrapper {
+        padding-top: 48px;
+    }
+    .banner {
+        padding: 0 0 24px 0;
+    }
+    .banner-item {
+        height: 200px;
+        padding: 0 4px;
+    }
+}
+
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+}
+
+@media only screen and (min-width: 64em) {
 }

@@ -75,3 +75,21 @@ a[href] {
     src: url('/assets/fonts/CircularStd-Medium.otf');
     font-weight: 400;
 }
+
+@media only screen and (max-width: 46.1875em) {
+    .hide-on-mobile {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+    .hide-on-tablet {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 64em) {
+    .hide-on-tablet-mobile {
+        display: none;
+    }
+}

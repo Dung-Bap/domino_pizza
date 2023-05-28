@@ -71,7 +71,7 @@
 }
 
 .input {
-    display: block;
+    display: flex;
     width: 100%;
     font-size: 1.5rem;
     padding: 12px 12px;
@@ -95,4 +95,21 @@
 
 .btn {
     width: 100%;
+}
+
+@media only screen and (max-width: 46.1875em) {
+    .image {
+        display: none;
+    }
+    .content {
+        padding: 2px 34px;
+    }
+    .header {
+        margin: 0 0 10px 0;
+    }
+}
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+    .image {
+        display: none;
+    }
 }

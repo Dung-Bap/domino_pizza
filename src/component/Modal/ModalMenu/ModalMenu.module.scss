@@ -1,0 +1,42 @@
+.wrapper {
+    position: fixed;
+    top: 48px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+    background-color: #004666;
+    padding-top: 16px;
+    animation: ModalFadeInOut 0.75s ease-in-out;
+}
+
+.wrapper.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.memu_list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: #fff;
+}
+
+.menu_item {
+    user-select: none;
+    padding: 8px;
+    text-transform: uppercase;
+    min-height: 50px;
+}
+
+@keyframes ModalFadeInOut {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

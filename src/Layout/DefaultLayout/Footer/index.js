@@ -18,11 +18,8 @@ function Footer() {
                 <div className={cx('main')}>
                     <img className={cx('logo')} src="https://dominos.vn/img/logo/domino.svg" alt="" />
                     <div className={cx('hotline-wrapper')}>
-                        <p className={cx('hotline')}>
-                            {' '}
-                            <FontAwesomeIcon icon={faPhone} />
-                            Hotline Đặt Hàng{' '}
-                        </p>
+                        <FontAwesomeIcon icon={faPhone} />
+                        <p className={cx('hotline')}> Hotline Đặt Hàng </p>
                         <p className={cx('phone')}>1900 6099</p>
                     </div>
                     <div className={cx('group')}>

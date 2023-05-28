@@ -62,6 +62,7 @@
     font-size: 14px;
     display: inline-block;
     margin-bottom: 8px;
+    margin-left: 8px;
 }
 
 .phone {
@@ -124,4 +125,40 @@
     background-color: #0078ae;
     margin-right: -10px;
     cursor: pointer;
+}
+
+@media only screen and (max-width: 46.1875em) {
+    .hide-on-mobile {
+        display: none;
+    }
+    .header,
+    .group,
+    .logo,
+    .change-language,
+    .credential {
+        display: none;
+    }
+
+    .main {
+        display: flex;
+        justify-content: center;
+    }
+    .wrapper {
+        padding: 0;
+    }
+    .policy {
+        justify-content: center;
+    }
+    .hotline-wrapper {
+        margin: 0;
+    }
+}
+
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+    .group {
+        display: none;
+    }
+    .logo {
+        margin: 0;
+    }
 }

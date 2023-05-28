@@ -55,7 +55,7 @@
 
 .line {
     width: 64px;
-    background-color: #e8e1e1;
+    background-color: #f08d8d;
     height: 3px;
     border: none;
     margin-bottom: 12px;
@@ -68,7 +68,7 @@
 .text {
     font-size: 14px;
     color: #212529;
-    font-weight: 600;
+    font-weight: 800;
     margin-bottom: 16px;
     line-height: 1.2;
 
@@ -82,4 +82,28 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     text-align: left;
+}
+
+@media only screen and (max-width: 46.1875em) {
+    .container {
+        flex-direction: column;
+    }
+    .card {
+        padding: 0;
+    }
+    .deal {
+        justify-content: center;
+    }
+    .img {
+        height: 200px;
+    }
+    .header {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+    .card {
+        padding: 0;
+    }
 }

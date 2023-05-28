@@ -15,7 +15,7 @@ function Blog() {
             </nav>
             <h2 className={cx('bigtitle')}>TIN TỨC - DOMINO'S PIZZA VIỆT NAM</h2>
             <div className={cx('container')}>
-                <div className={cx('content')}>
+                <div className={cx('content_1')}>
                     <Image
                         className={cx('image_1')}
                         alt=""
@@ -27,7 +27,7 @@ function Blog() {
                         sẻ trong bài viết sau đây. Cùng khám phá ngay thôi nào!
                     </p>
                 </div>
-                <div className={cx('content')}>
+                <div className={cx('content_2')}>
                     <Image
                         className={cx('image_2')}
                         alt=""

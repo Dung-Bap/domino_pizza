@@ -48,7 +48,6 @@
 .bar {
     display: flex;
     position: relative;
-
     flex-direction: column;
     max-width: 396px;
     width: 100%;
@@ -57,7 +56,6 @@
 
 .selector {
     appearance: none;
-
     display: inline-block;
     width: 100%;
     color: #858891;
@@ -103,4 +101,44 @@
     display: flex;
     flex-direction: column;
     height: 400px;
+}
+
+@media only screen and (max-width: 46.1875em) {
+    .container {
+        flex-direction: column;
+    }
+    .map {
+        width: 100%;
+    }
+    .bar {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+    .search {
+        position: relative;
+        z-index: 0;
+        width: 100%;
+        top: 0;
+        left: 0;
+        padding-bottom: 16px;
+    }
+    .wrapper {
+        padding-top: 48px;
+    }
+    .btn_down1,
+    .btn_down2 {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+    .container {
+        flex-direction: column;
+    }
+    .map {
+        width: 100%;
+    }
+    .bar {
+        max-width: 100%;
+    }
 }
