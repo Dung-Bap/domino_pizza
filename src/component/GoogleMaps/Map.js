@@ -1,10 +1,10 @@
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import React, { useEffect, useState } from 'react';
 import GoogleMapReact from 'google-map-react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import classNames from 'classnames/bind';
 import styles from './Map.module.scss';
-import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 
 const cx = classNames.bind(styles);
 
@@ -13,7 +13,7 @@ const Marker = () => {
 };
 
 function Map() {
-    const [coords, setCooords] = useState(0);
+    const [coords, setCooords] = useState({});
 
     const defaultProps = {
         center: {
@@ -35,6 +35,7 @@ function Map() {
             <GoogleMapReact
                 bootstrapURLKeys={{ key: 'AIzaSyD6EjRVGGUK_wbdAvRmzZKBx4RSFThf7BA' }}
                 defaultZoom={defaultProps.zoom}
+                // defaultZoom={15}
                 defaultCenter={defaultProps.center}
                 center={coords}
             >

@@ -25,6 +25,9 @@ function Header() {
             <Link to={'/'}>
                 <img
                     className={cx('logo', 'hide-on-mobile')}
+                    onClick={() =>
+                        ModalContext.handleSetDocumentTitle(`Domino's Pizza Việt Nam - Thương Hiệu Pizza Số 1 Thế Giới`)
+                    }
                     src="https://dominos.vn/img/logo/domino-horizontal-dark.svg"
                     alt=""
                 />
@@ -47,22 +50,52 @@ function Header() {
                     </Link>
                     {/* Hide-on-tablet > */}
                     <Link to={'/voucher'}>
-                        <div className={cx('nav-item', 'hide-on-mobile')}>MÃ E-VOUCHER</div>
+                        <div
+                            className={cx('nav-item', 'hide-on-mobile')}
+                            onClick={() => ModalContext.handleSetDocumentTitle('MÃ E-VOUCHER')}
+                        >
+                            MÃ E-VOUCHER
+                        </div>
                     </Link>
                     <Link to={'/promotion'}>
-                        <div className={cx('nav-item', 'hide-on-mobile')}>KHUYẾN MÃI</div>
+                        <div
+                            className={cx('nav-item', 'hide-on-mobile')}
+                            onClick={() => ModalContext.handleSetDocumentTitle('KHUYẾN MÃI')}
+                        >
+                            KHUYẾN MÃI
+                        </div>
                     </Link>
                     <Link to={'/product/pizza'}>
-                        <div className={cx('nav-item', 'hide-on-mobile')}>THỰC ĐƠN</div>
+                        <div
+                            className={cx('nav-item', 'hide-on-mobile')}
+                            onClick={() => ModalContext.handleSetDocumentTitle('THỰC ĐƠN')}
+                        >
+                            THỰC ĐƠN
+                        </div>
                     </Link>
                     <Link to={'/tracking'}>
-                        <div className={cx('nav-item', 'hide-on-mobile')}>THEO DÕI ĐƠN HÀNG</div>
+                        <div
+                            className={cx('nav-item', 'hide-on-mobile')}
+                            onClick={() => ModalContext.handleSetDocumentTitle(' THEO DÕI ĐƠN HÀNG')}
+                        >
+                            THEO DÕI ĐƠN HÀNG
+                        </div>
                     </Link>
                     <Link to={'/store'}>
-                        <div className={cx('nav-item', 'hide-on-mobile')}>DANH SÁCH CỬA HÀNG</div>
+                        <div
+                            className={cx('nav-item', 'hide-on-mobile')}
+                            onClick={() => ModalContext.handleSetDocumentTitle('DANH SÁCH CỬA HÀNG')}
+                        >
+                            DANH SÁCH CỬA HÀNG
+                        </div>
                     </Link>
                     <Link to={'/blog'}>
-                        <div className={cx('nav-item', 'hide-on-mobile')}>BLOG</div>
+                        <div
+                            className={cx('nav-item', 'hide-on-mobile')}
+                            onClick={() => ModalContext.handleSetDocumentTitle('BLOG')}
+                        >
+                            BLOG
+                        </div>
                     </Link>
                 </div>
             </div>
@@ -74,7 +107,11 @@ function Header() {
                 <FontAwesomeIcon onClick={ModalContext.handleShowModal} className={cx('icon')} icon={faUserAlt} />
                 <Link to={'/cart'}>
                     {' '}
-                    <FontAwesomeIcon className={cx('icon')} icon={faBagShopping} />
+                    <FontAwesomeIcon
+                        className={cx('icon')}
+                        icon={faBagShopping}
+                        onClick={() => ModalContext.handleSetDocumentTitle('CART')}
+                    />
                 </Link>
                 {/* Hide-on-tablet > */}
                 <span className={cx('notify-cart')}>0</span>
