@@ -8,6 +8,7 @@ import Map from '~/component/GoogleMaps/Map';
 import Button from '~/component/Button/Button';
 import StoreItem from './StoreItem /StoreItem';
 import * as provinceService from '~/services/provinceService';
+import { dataStore } from '~/Variable/Variable';
 const cx = classNames.bind(styles);
 
 function Store() {
@@ -75,18 +76,9 @@ function Store() {
                     </select>
                     <p className={cx('list_store')}>Danh sách cửa hàng</p>
                     <div className={cx('store_list')}>
-                        <StoreItem />
-                        <StoreItem />
-                        <StoreItem />
-                        <StoreItem />
-                        <StoreItem />
-                        <StoreItem />
-                        <StoreItem />
-                        <StoreItem />
-                        <StoreItem />
-                        <StoreItem />
-                        <StoreItem />
-                        <StoreItem />
+                        {dataStore.map((item, index) => (
+                            <StoreItem key={index} data={item} />
+                        ))}
                     </div>
                 </form>
             </div>

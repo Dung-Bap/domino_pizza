@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const request = axios.create({
-    baseURL: 'https://vapi.vnappmob.com/api/',
+    baseURL: 'https://dominos.vn/_next/data/pZHK-WB1IQdskOqJ6OgnT/promotion-listing.json?device-enum=0',
 });
 
 export const get = async (path, options = {}) => {
