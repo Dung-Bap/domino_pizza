@@ -23,12 +23,11 @@ function ModalProvider({ children }) {
     const handleShowModalMenu = (e) => {
         e.stopPropagation();
         setShowMenu(!showMenu);
-        document.body.style.overflow = !showMenu ? 'hidden' : 'overlay';
     };
 
-    const handleHideModalMenu = () => {
+    const handleHideModalMenu = (e) => {
+        e.stopPropagation();
         setShowMenu(false);
-        document.body.style.overflow = !showMenu ? 'hidden' : 'overlay';
     };
 
     const handleSetDocumentTitle = (title) => {
