@@ -1,7 +1,5 @@
 import { createContext, useState } from 'react';
 import { useDocumentTitle } from '../Hook/useDocumentTitle';
-import Modal from '../Modal/Modal';
-import ModalMenu from '../Modal/ModalMenu/ModalMenu';
 
 export const ModalEnvironment = createContext();
 
@@ -19,6 +17,7 @@ function ModalProvider({ children }) {
 
     const handleHideModal = () => {
         setShow(false);
+        document.body.style.overflow = !show ? 'hidden' : 'overlay';
     };
 
     const handleShowModalMenu = (e) => {
@@ -29,6 +28,7 @@ function ModalProvider({ children }) {
 
     const handleHideModalMenu = () => {
         setShowMenu(false);
+        document.body.style.overflow = !showMenu ? 'hidden' : 'overlay';
     };
 
     const handleSetDocumentTitle = (title) => {
@@ -46,12 +46,7 @@ function ModalProvider({ children }) {
         document_title,
     };
 
-    return (
-        <ModalEnvironment.Provider value={value}>
-            {children} <Modal />
-            <ModalMenu />
-        </ModalEnvironment.Provider>
-    );
+    return <ModalEnvironment.Provider value={value}>{children}</ModalEnvironment.Provider>;
 }
 
 export default ModalProvider;
