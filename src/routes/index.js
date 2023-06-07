@@ -6,9 +6,9 @@ import Tracking from '~/pages/Tracking';
 import Store from '~/pages/Store/Store';
 import PizzaListing from '~/ProductPages/PizzaListing/PizzaListing';
 import ProductItems from '~/Layout/ProductItems/ProductItems';
-import Sides from '~/ProductPages/Sides';
-import Dessert from '~/ProductPages/Dessert';
-import Drinks from '~/ProductPages/Drinks';
+import Sides from '~/ProductPages/Sides/Sides';
+import Dessert from '~/ProductPages/Dessert/Dessert';
+import Drinks from '~/ProductPages/Drinks/Drinks';
 import Blog from '~/pages/Blog/Blog';
 import CartItem from '~/pages/CartItem/CartItem';
 

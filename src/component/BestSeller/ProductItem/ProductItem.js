@@ -4,7 +4,10 @@ import Image from '~/component/Image/Image';
 
 const cx = classNames.bind(styles);
 
-function ProductItem({ data, className }) {
+function ProductItem({ data, className, product }) {
+    let price2 = product?.price2;
+    price2 = price2?.toLocaleString('it-IT', { style: 'currency', currency: 'VND' });
+
     const classes = cx('product-item', {
         [className]: className,
     });
@@ -13,21 +16,11 @@ function ProductItem({ data, className }) {
         <div className={classes}>
             <div className={cx('wrapper-item')}>
                 <div className={cx('item-img')}>
-                    {data ? (
-                        <Image className={cx('img')} src={data.img} alt="" />
-                    ) : (
-                        <Image className={cx('img')} src="https://img.dominos.vn/Menu+BG.jpg" alt="" />
-                    )}
+                    <Image className={cx('img')} src={data?.img || product?.pic_url} alt="" />
                 </div>
                 <div className={cx('body')}>
-                    {data ? (
-                        <div className={cx('name')}>{data.name}</div>
-                    ) : (
-                        <div className={cx('name')}>
-                            Pizza Bangkok Cà Ri Xanh Tôm Gà - Bangkok Green Curry Shrimp Chicken
-                        </div>
-                    )}
-                    {data ? <p className={cx('price')}>{data.price}</p> : <p className={cx('price')}>209.000d</p>}
+                    <div className={cx('name')}>{data?.name || product?.product_name}</div>
+                    <p className={cx('price')}>{data?.price || price2}</p>
                 </div>
             </div>
         </div>

@@ -50,6 +50,9 @@
     margin-bottom: 0.8rem;
     font-size: 14px;
     font-weight: 800;
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 .price {
