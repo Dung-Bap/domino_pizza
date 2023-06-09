@@ -5,6 +5,7 @@ export const ModalEnvironment = createContext();
 
 function ModalProvider({ children }) {
     const [show, setShow] = useState(false);
+    const [hide, setHide] = useState(true);
     const [showMenu, setShowMenu] = useState(false);
     const [document_title, setDoucmentTitle] = useDocumentTitle(
         `Domino's Pizza Việt Nam - Thương Hiệu Pizza Số 1 Thế Giới`,
@@ -40,6 +41,8 @@ function ModalProvider({ children }) {
         handleShowModalMenu,
         handleHideModalMenu,
         handleSetDocumentTitle,
+        setHide,
+        hide,
         show,
         showMenu,
         document_title,

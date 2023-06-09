@@ -89,7 +89,7 @@ function Header() {
                             DANH SÁCH CỬA HÀNG
                         </div>
                     </Link>
-                    <Link to={'/blog'}>
+                    <Link to={'/blog/content'}>
                         <div
                             className={cx('nav-item', 'hide-on-mobile')}
                             onClick={() => ModalContext.handleSetDocumentTitle('BLOG')}

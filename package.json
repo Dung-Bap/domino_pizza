@@ -16,6 +16,7 @@
         "bootstrap": "^5.2.3",
         "classnames": "^2.3.2",
         "customize-cra": "^1.0.0",
+        "dompurify": "^3.0.3",
         "firebase": "^9.22.1",
         "gh-pages": "^5.0.0",
         "google-map-react": "^2.2.1",

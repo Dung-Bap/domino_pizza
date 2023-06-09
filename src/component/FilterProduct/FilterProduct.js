@@ -1,6 +1,5 @@
 import Button from '~/component/Button/Button';
 import Image from '~/component/Image/Image';
-
 import classNames from 'classnames/bind';
 import styles from './FilterProduct.module.scss';
 

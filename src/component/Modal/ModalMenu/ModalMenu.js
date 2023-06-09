@@ -33,7 +33,7 @@ function ModalMenu() {
                             <Link to={'/tracking'}>
                                 <li className={cx('menu_item')}>Theo dõi đơn hàng</li>
                             </Link>
-                            <Link to={'/blog'}>
+                            <Link to={'/blog/content'}>
                                 {' '}
                                 <li className={cx('menu_item')}>Blog</li>
                             </Link>
