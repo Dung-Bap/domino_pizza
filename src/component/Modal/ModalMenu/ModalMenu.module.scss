@@ -7,14 +7,12 @@
     z-index: 999;
     background-color: #004666;
     padding-top: 16px;
-    animation: ModalFadeInOut 0.75s ease-in-out;
+    transform: 0;
+    animation: fadeIn 0.75s ease-in-out;
 }
-
-.wrapper.active {
-    opacity: 1;
-    transform: translateX(0);
+.inactive {
+    animation: fadeOut 0.75s ease-in-out;
 }
-
 .memu_list {
     list-style: none;
     display: flex;
@@ -30,7 +28,7 @@
     min-height: 50px;
 }
 
-@keyframes ModalFadeInOut {
+@keyframes fadeIn {
     from {
         opacity: 0;
         transform: translateX(-100%);
@@ -38,5 +36,16 @@
     to {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-100%);
     }
 }

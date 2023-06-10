@@ -120,7 +120,7 @@ function Header() {
                     <FontAwesomeIcon
                         className={cx('logo-menu-list')}
                         icon={faXmark}
-                        onClick={ModalContext.handleShowModalMenu}
+                        onClick={ModalContext.handleHideModalMenu}
                     />
                 ) : (
                     <FontAwesomeIcon

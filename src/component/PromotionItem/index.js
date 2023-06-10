@@ -3,11 +3,19 @@ import DOMPurify from 'dompurify';
 import Button from '../Button/Button';
 import classNames from 'classnames/bind';
 import styles from './PromotionItem.module.scss';
+import { useContext } from 'react';
+import { ModalEnvironment } from '../Context/Context';
 
 const cx = classNames.bind(styles);
 
 function PromotionItem({ data }) {
     let content = data.blog_content;
+    const { showNoti, setShowNoti } = useContext(ModalEnvironment);
+    const handleShowModalNoti = () => {
+        setShowNoti(true);
+        document.body.style.overflow = !showNoti ? 'hidden' : 'overlay';
+    };
+
     return (
         <div className={cx('wrapper')}>
             <div className={cx('container')}>
@@ -24,7 +32,7 @@ function PromotionItem({ data }) {
                             </div>
                             <div className={cx('button')}>
                                 {data.meta_datas.map((item, index) => (
-                                    <Button key={index} large>
+                                    <Button onClick={handleShowModalNoti} key={index} large>
                                         {item.text}
                                     </Button>
                                 ))}

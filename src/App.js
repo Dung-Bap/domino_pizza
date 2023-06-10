@@ -3,6 +3,7 @@ import { publishRoutes } from '~/routes';
 import DefaultLayout from './Layout/DefaultLayout';
 import Modal from './component/Modal/Modal';
 import ModalMenu from './component/Modal/ModalMenu/ModalMenu';
+import ModalNotification from './component/Modal/ModalNotification/ModalNotification';
 
 function App() {
     return (
@@ -34,6 +35,7 @@ function App() {
             </div>
             <Modal />
             <ModalMenu />
+            <ModalNotification />
         </BrowserRouter>
     );
 }

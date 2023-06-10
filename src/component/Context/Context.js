@@ -5,8 +5,10 @@ export const ModalEnvironment = createContext();
 
 function ModalProvider({ children }) {
     const [show, setShow] = useState(false);
-    const [hide, setHide] = useState(true);
     const [showMenu, setShowMenu] = useState(false);
+    const [showNoti, setShowNoti] = useState(false);
+    const [hide, setHide] = useState(true);
+    const [hideModal, setHideModal] = useState(false);
     const [document_title, setDoucmentTitle] = useDocumentTitle(
         `Domino's Pizza Việt Nam - Thương Hiệu Pizza Số 1 Thế Giới`,
     );
@@ -28,7 +30,11 @@ function ModalProvider({ children }) {
 
     const handleHideModalMenu = (e) => {
         e.stopPropagation();
-        setShowMenu(false);
+        setHideModal(true);
+        setTimeout(() => {
+            setHideModal(false);
+            setShowMenu(false);
+        }, 650);
     };
 
     const handleSetDocumentTitle = (title) => {
@@ -36,16 +42,20 @@ function ModalProvider({ children }) {
     };
 
     const value = {
-        handleShowModal,
+        hide,
+        show,
+        showNoti,
+        showMenu,
+        hideModal,
+        document_title,
+        setHide,
+        setShowNoti,
+        setHideModal,
         handleHideModal,
+        handleShowModal,
         handleShowModalMenu,
         handleHideModalMenu,
         handleSetDocumentTitle,
-        setHide,
-        hide,
-        show,
-        showMenu,
-        document_title,
     };
 
     return <ModalEnvironment.Provider value={value}>{children}</ModalEnvironment.Provider>;
