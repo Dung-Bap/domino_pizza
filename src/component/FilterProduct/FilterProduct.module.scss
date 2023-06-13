@@ -5,11 +5,23 @@
 .button {
     margin-right: 16px;
     padding: 5px 14px;
+    font-weight: 400;
 }
 
 .icon {
     width: 20px;
     height: 20px;
+}
+
+.active {
+    border: none;
+    background-color: #e31837;
+    color: #fff;
+    &:hover {
+        color: #fff;
+        background-color: #c0142f;
+        border-color: #b5132c;
+    }
 }
 
 @media only screen and (max-width: 46.1875em) {

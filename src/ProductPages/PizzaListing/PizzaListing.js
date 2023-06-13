@@ -6,13 +6,31 @@ import ProductCollection from './ProductCollection/ProductCollection';
 const cx = classNames.bind(styles);
 
 function PizzaListing() {
+    const collections = [
+        {
+            id: 1,
+            name: 'FLAVORS OF THE WORLD',
+        },
+        {
+            id: 2,
+            name: 'SEAFOOD CRAVERS',
+        },
+        {
+            id: 3,
+            name: 'KID FAVORS',
+        },
+        {
+            id: 4,
+            name: 'TRADITIONAL & MEAT LOVERS',
+        },
+    ];
+
     return (
         <div className={cx('wrapper')}>
             <FilterProduct />
-            <ProductCollection title={'FLAVORS OF THE WORLD'} />
-            <ProductCollection title={'SEAFOOD CRAVERS'} />
-            <ProductCollection title={'KID FAVORS'} />
-            <ProductCollection title={'TRADITIONAL & MEAT LOVERS'} />
+            {collections.map((item) => (
+                <ProductCollection key={item.id} title={item.name} />
+            ))}
         </div>
     );
 }
