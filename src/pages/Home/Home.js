@@ -32,6 +32,9 @@ function Home() {
         centerPadding: '100px',
         nextArrow: <SampleNextArrow />,
         prevArrow: <SamplePrevArrow />,
+        // adaptiveHeight: true,
+        // variableWidth: true,
+        // className: 'slider variable-width',
     };
 
     const bestSellerItems = [

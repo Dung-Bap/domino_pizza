@@ -7,6 +7,19 @@ import { useRef, useState } from 'react';
 const cx = classNames.bind(styles);
 
 function SearchAddress({ className, primary = false, small = false, ...passProps }) {
+    const selectDeli = [
+        {
+            id: 1,
+            name: 'Giao hàng tận nơi',
+        },
+        {
+            id: 2,
+            name: 'Đặt đến lấy',
+        },
+    ];
+
+    const [active, setActive] = useState(1);
+
     const props = {
         ...passProps,
     };
@@ -17,7 +30,6 @@ function SearchAddress({ className, primary = false, small = false, ...passProps
         small,
     });
 
-    const [active, setActive] = useState(true);
     const [value, setValue] = useState('');
     const inputRef = useRef();
 
@@ -30,12 +42,15 @@ function SearchAddress({ className, primary = false, small = false, ...passProps
         <div className={classes} {...props}>
             <div className={cx('container')}>
                 <div className={cx('label')}>
-                    <div onClick={() => setActive(!active)} className={cx('label-item', { active: active })}>
-                        Giao hàng tận nơi
-                    </div>
-                    <div onClick={() => setActive(!active)} className={cx('label-item', { active: !active })}>
-                        Đặt đến lấy
-                    </div>
+                    {selectDeli.map((item, index) => (
+                        <div
+                            className={cx('label-item', item.id === active ? 'active' : '')}
+                            onClick={() => setActive(item.id)}
+                            key={index}
+                        >
+                            {item.name}
+                        </div>
+                    ))}
                 </div>
                 <div className={cx('wrapper-from')}>
                     <form className={cx('form')}>
