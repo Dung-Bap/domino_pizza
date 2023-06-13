@@ -7,21 +7,28 @@ import Slider from 'react-slick';
 import { bannerImg } from '~/assets/Img/banner';
 import SearchAddress from '~/component/SearchAddress';
 import BestSeller from '~/component/BestSeller/BestSeller';
+import { useEffect, useState } from 'react';
 const cx = classNames.bind(styles);
 
 function Home() {
-    function SampleNextArrow(props) {
-        const { className, style, onClick } = props;
-        return <div className={className} style={{ ...style, display: 'none' }} onClick={onClick} />;
-    }
+    const [width, setWidth] = useState(true);
+    const [deviceSize, changeDeviceSize] = useState(window.innerWidth);
 
-    function SamplePrevArrow(props) {
-        const { className, style, onClick } = props;
-        return <div className={className} style={{ ...style, display: 'none' }} onClick={onClick} />;
-    }
+    useEffect(() => {
+        const resizeW = () => changeDeviceSize(window.innerWidth);
+
+        window.addEventListener('resize', resizeW); // Update the width on resize
+
+        return () => window.removeEventListener('resize', resizeW);
+    });
+
+    useEffect(() => {
+        setWidth(!(deviceSize <= 739));
+    }, [deviceSize]);
+
     const settings = {
         dots: true,
-        centerMode: true,
+        centerMode: width,
         infinite: true,
         autoplay: true,
         slidesToShow: 1,
@@ -30,11 +37,6 @@ function Home() {
         autoplaySpeed: 3000,
         cssEase: 'linear',
         centerPadding: '100px',
-        nextArrow: <SampleNextArrow />,
-        prevArrow: <SamplePrevArrow />,
-        // adaptiveHeight: true,
-        // variableWidth: true,
-        // className: 'slider variable-width',
     };
 
     const bestSellerItems = [

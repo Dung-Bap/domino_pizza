@@ -7,7 +7,7 @@
 }
 
 .banner-item {
-    border-radius: 0.3rem;
+    border-radius: 6px;
     object-fit: cover;
     padding: 0 12px;
     height: calc(100vh - 193px);
@@ -24,8 +24,8 @@
         padding: 0 0 24px 0;
     }
     .banner-item {
-        height: 200px;
-        padding: 0 4px;
+        padding: 0;
+        height: calc(100vh - 136px);
     }
 }
 

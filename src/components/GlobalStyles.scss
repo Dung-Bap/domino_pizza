@@ -77,20 +77,43 @@ a[href] {
     font-weight: 400;
 }
 
+.slick-next {
+    height: 80px;
+}
+
+.slick-next::before {
+    content: url(https://dominos.vn/img/icon/slider-next.svg);
+}
+
+.slick-prev {
+    height: 80px;
+    z-index: 10;
+    left: 46px;
+}
+
+.slick-prev::before {
+    content: url(https://dominos.vn/img/icon/slider-back.svg);
+}
+
+.slick-slide {
+    opacity: 0.7;
+}
+
+.slick-active {
+    opacity: 1;
+}
+
 @media only screen and (max-width: 46.1875em) {
-    .hide-on-mobile {
+    .slick-prev,
+    .slick-next,
+    .slick-next::before,
+    .slick-prev::before {
         display: none;
     }
 }
 
 @media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
-    .hide-on-tablet {
-        display: none;
-    }
 }
 
 @media only screen and (min-width: 64em) {
-    .hide-on-tablet-mobile {
-        display: none;
-    }
 }
