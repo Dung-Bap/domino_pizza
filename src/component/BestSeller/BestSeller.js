@@ -24,8 +24,8 @@ function BestSeller({ data }) {
                     </ul>
                 </div>
                 <div className={cx('content')}>
-                    {data.map((item, index) => (
-                        <ProductItem key={index} data={item} />
+                    {data.map((item) => (
+                        <ProductItem key={item.product_id} bestSellerId={item.product_id} data={item} />
                     ))}
                 </div>
                 <div className={cx('more-btn')}>

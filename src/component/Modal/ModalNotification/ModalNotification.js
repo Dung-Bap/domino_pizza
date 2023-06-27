@@ -1,17 +1,22 @@
+import { useContext, useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+
 import classNames from 'classnames/bind';
 import styles from './ModalNotification.module.scss';
-import { useContext, useState } from 'react';
+
 import { ModalEnvironment } from '~/component/Context/Context';
 import { createPortal } from 'react-dom';
-import Button from '~/component/Button/Button';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClose } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
+import { getProduct } from '~/redux/selector';
+import Button from '~/component/Button/Button';
 
 const cx = classNames.bind(styles);
 
 function ModalNotification() {
     const { showNoti, setShowNoti } = useContext(ModalEnvironment);
+    const productList = useSelector(getProduct);
     const [scale, setScale] = useState(false);
     const [hide, setHide] = useState(false);
 
@@ -47,7 +52,13 @@ function ModalNotification() {
                         >
                             <div className={cx('content')}>
                                 <h4 className={cx('header')}> Thông báo</h4>
-                                <span className={cx('title')}> Vui lòng nhập địa chỉ để tiếp tục mua hàng</span>
+                                {productList.length ? (
+                                    <span className={cx('title')}> Mình không thích bán nữa ! </span>
+                                ) : (
+                                    <span className={cx('title')}>
+                                        {`Vui lòng nhập địa chỉ để tiếp tục mua hàng ( đang phát triển )`}
+                                    </span>
+                                )}
                                 <Link to={'/store'}>
                                     <Button onClick={handleHideModal} className={cx('button')} primary>
                                         Đã hiểu

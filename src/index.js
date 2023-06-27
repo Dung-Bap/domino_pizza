@@ -6,13 +6,17 @@ import GlobalStyles from './components/GlobalStyles';
 import ModalProvider from './component/Context/Context';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { Provider } from 'react-redux';
+import store from './redux/store';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <GlobalStyles>
-        <ModalProvider>
-            <App />
-        </ModalProvider>
+        <Provider store={store}>
+            <ModalProvider>
+                <App />
+            </ModalProvider>
+        </Provider>
     </GlobalStyles>,
 );
 

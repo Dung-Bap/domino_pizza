@@ -99,13 +99,15 @@
 
 .notify-cart {
     position: absolute;
-    right: 21px;
-    top: 15px;
-    padding: 2px 8px;
+    right: 23px;
+    top: 11px;
+    padding: 2px 4px;
     font-size: 1.2rem;
     background-color: #aa1934;
     border-radius: 3px;
     color: #fff;
+    min-width: 20px;
+    text-align: center;
 }
 
 @media only screen and (max-width: 46.1875em) {

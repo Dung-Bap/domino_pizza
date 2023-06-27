@@ -14,6 +14,7 @@ import Recruitment from '~/pages/Blog/Recruitment/Recruitment';
 import MoreInformation from '~/pages/Blog/MoreInformation/MoreInformation';
 import BlogLayout from '~/Layout/BlogLayout/BlogLayout';
 import BlogContent from '~/pages/Blog/BlogContent/BlogContent';
+import CustomLayout from '~/Layout/CustomLayout';
 
 const publishRoutes = [
     { path: '/', component: Home },
@@ -21,7 +22,7 @@ const publishRoutes = [
     { path: '/promotion', component: Promotion },
     { path: '/tracking', component: Tracking },
     { path: '/store', component: Store },
-    { path: '/cart', component: CartItem },
+    { path: '/cart', component: CartItem, layout: CustomLayout },
     { path: '/product/pizza', component: PizzaListing, layout: ProductItems },
     { path: '/product/sides', component: Sides, layout: ProductItems },
     { path: '/product/dessert', component: Dessert, layout: ProductItems },

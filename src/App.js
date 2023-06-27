@@ -4,6 +4,7 @@ import DefaultLayout from './Layout/DefaultLayout';
 import Modal from './component/Modal/Modal';
 import ModalMenu from './component/Modal/ModalMenu/ModalMenu';
 import ModalNotification from './component/Modal/ModalNotification/ModalNotification';
+import ModalAddProduct from './component/Modal/ModalAddProduct/ModalAddProduct';
 
 function App() {
     return (
@@ -36,6 +37,7 @@ function App() {
             <Modal />
             <ModalMenu />
             <ModalNotification />
+            <ModalAddProduct />
         </BrowserRouter>
     );
 }

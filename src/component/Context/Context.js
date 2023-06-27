@@ -7,6 +7,7 @@ function ModalProvider({ children }) {
     const [show, setShow] = useState(false);
     const [showMenu, setShowMenu] = useState(false);
     const [showNoti, setShowNoti] = useState(false);
+    const [showAddProduct, setShowAddProduct] = useState(false);
     const [hide, setHide] = useState(true);
     const [hideModal, setHideModal] = useState(false);
     const [document_title, setDoucmentTitle] = useDocumentTitle(
@@ -48,11 +49,13 @@ function ModalProvider({ children }) {
         showMenu,
         hideModal,
         document_title,
+        showAddProduct,
         setHide,
         setShowNoti,
         setHideModal,
         handleHideModal,
         handleShowModal,
+        setShowAddProduct,
         handleShowModalMenu,
         handleHideModalMenu,
         handleSetDocumentTitle,

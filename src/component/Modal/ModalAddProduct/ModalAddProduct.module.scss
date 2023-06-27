@@ -1,0 +1,242 @@
+.wrapper {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.container {
+    position: relative;
+    pointer-events: auto;
+    background-color: #f2f4f8;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    outline: 0;
+    max-width: 796px;
+}
+
+.content {
+    display: flex;
+    width: 100%;
+}
+
+.content-left {
+    width: 40%;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    object-fit: cover;
+}
+
+.content-right {
+    width: 60%;
+}
+
+.ahihi {
+    max-height: 630px;
+    min-height: 150px;
+    padding: 0 24px;
+    margin: 8px;
+    overflow: auto;
+    position: relative;
+}
+
+.title-hr {
+    border-bottom: 2px solid #dfe4ea;
+    width: 4rem;
+    display: inline-flex;
+}
+
+.header h2 {
+    width: calc(100% - 40px);
+    color: #0078ae;
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.header p {
+    white-space: pre-line;
+    margin-bottom: 24px;
+    color: #858891;
+    font-weight: 400;
+    line-height: 1.25;
+    text-align: left;
+    font-size: 14px;
+}
+
+.detail {
+    padding: 16px;
+}
+
+.title {
+    font-weight: 900;
+    line-height: 1.25;
+    color: #212529;
+    text-align: left;
+}
+
+.select-item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 4px 0;
+    border-bottom: 1px solid #d9dce2;
+    list-style: circle;
+}
+
+.img {
+    width: 40px;
+    height: 40px;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #e31837;
+    z-index: 1050;
+    padding: 10px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 24px;
+    border-top-right-radius: 8px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0;
+    box-shadow: 0px 0px 16px rgb(0 42 61 / 16%);
+    padding: 15px;
+}
+
+.count {
+    display: flex;
+}
+
+.counting {
+    padding: 11px 18px;
+    color: #212529;
+    background-color: #dfe4ea;
+    border-color: #dfe4ea;
+    display: block;
+    width: 50px;
+}
+
+.counting:nth-child(1) {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.active {
+    cursor: pointer;
+    &:hover {
+        background-color: #d3d9de;
+        border-color: #dfe4ea;
+    }
+}
+
+.counting:nth-child(3) {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    cursor: pointer;
+    &:hover {
+        background-color: #d3d9de;
+        border-color: #dfe4ea;
+    }
+}
+
+.add-cart {
+    margin: 0;
+    padding: 0;
+    width: 274px;
+    height: 46px;
+}
+
+@media only screen and (max-width: 46.1875em) {
+    .container {
+        max-width: 350px;
+        width: 100%;
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+    .content-left {
+        width: 100%;
+    }
+    .content-right {
+        width: 100%;
+    }
+    .image {
+        height: 200px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        border-bottom-left-radius: 0;
+    }
+    .ahihi {
+        max-height: 245px;
+        padding: 0;
+    }
+    .footer {
+        justify-content: none;
+        flex-direction: column;
+    }
+    .count {
+        margin-bottom: 15px;
+    }
+    .add-cart {
+        width: 300px;
+    }
+}
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+    .container {
+        max-width: 500px;
+        width: 100%;
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+    .content-left {
+        width: 100%;
+    }
+    .content-right {
+        width: 100%;
+    }
+    .image {
+        height: 200px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        border-bottom-left-radius: 0;
+    }
+    .ahihi {
+        max-height: 390px;
+    }
+    .footer {
+        justify-content: none;
+        flex-direction: column;
+    }
+    .count {
+        margin-bottom: 15px;
+    }
+    .add-cart {
+        width: 400px;
+    }
+}

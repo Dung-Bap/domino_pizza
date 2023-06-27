@@ -15,8 +15,8 @@ function ProductCollection({ title }) {
         <div className={cx('container')}>
             <div className={cx('title')}>{title}</div>
             <div className={cx('product_list')}>
-                {data.map((item, index) => (
-                    <ProductItem key={index} product={item} className={cx('item')} />
+                {data.map((item) => (
+                    <ProductItem key={item.product_id} id={item.product_id} product={item} className={cx('item')} />
                 ))}
             </div>
         </div>

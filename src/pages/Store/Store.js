@@ -46,6 +46,7 @@ function Store() {
                 </div>
                 <form className={cx('bar')} action="get" target="/">
                     <select
+                        defaultValue={provinces?.province_id}
                         value={provinces?.province_id}
                         onChange={(e) => {
                             setValueProvince(e.target.value);
@@ -64,7 +65,12 @@ function Store() {
                     </select>
                     <FontAwesomeIcon className={cx('btn_down1')} icon={faCaretDown} />
                     <FontAwesomeIcon className={cx('btn_down2')} icon={faCaretDown} />
-                    <select value={districts?.district_id} className={cx('selector')} name="district">
+                    <select
+                        defaultValue={districts?.district_id}
+                        value={districts?.district_id}
+                        className={cx('selector')}
+                        name="district"
+                    >
                         <option value="" selected="">
                             Chọn Quận/Huyện
                         </option>

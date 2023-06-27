@@ -14,11 +14,19 @@ import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { ModalEnvironment } from '~/component/Context/Context';
 import { faGalacticRepublic } from '@fortawesome/free-brands-svg-icons';
+import { useSelector } from 'react-redux';
+import { getProduct } from '~/redux/selector';
 
 const cx = classNames.bind(styles);
 
 function Header() {
     const ModalContext = useContext(ModalEnvironment);
+
+    const productList = useSelector(getProduct);
+
+    const sumQuantity = productList.reduce((acc, curr) => {
+        return acc + curr.cartQuantity;
+    }, 0);
 
     return (
         <nav className={cx('wrapper')} onClick={ModalContext.handleHideModalMenu}>
@@ -114,7 +122,7 @@ function Header() {
                     />
                 </Link>
                 {/* Hide-on-tablet > */}
-                <span className={cx('notify-cart')}>0</span>
+                <span className={cx('notify-cart')}>{sumQuantity}</span>
 
                 {ModalContext.showMenu ? (
                     <FontAwesomeIcon

@@ -1,3 +1,131 @@
+.wrapper {
+    padding: 0 12px;
+    max-width: 396px;
+    width: 100%;
+}
+
+.product-list {
+    padding: 0 8px;
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.header-title,
+.header-des {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.25;
+    color: #212529;
+}
+
+.table {
+    width: 100%;
+}
+
+.body {
+    border-top: none;
+    border-bottom: 1px solid #dfe4ea;
+}
+
+.product-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.name {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.25;
+    color: #212529;
+    text-align: left;
+    padding-right: 30px;
+    min-width: 170px;
+}
+
+.price {
+    vertical-align: top;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.select {
+    color: #717273;
+    font-size: 14px;
+}
+
+.deleted {
+    color: #0078ae;
+    cursor: pointer;
+}
+
+.content ul {
+    padding: 0;
+    list-style: none;
+    min-width: 206px;
+}
+
+.amount,
+.symbol {
+    vertical-align: top;
+}
+
+.amount {
+    padding: 12px 8px 0 0;
+    width: 25px;
+}
+.symbol {
+    padding: 12px 8px 0;
+}
+
+.product {
+    padding: 12px 0 0 12px;
+}
+
+.image {
+    width: 64px;
+    height: 42px;
+    border-radius: 4px;
+}
+
+.footer {
+    box-shadow: 0px 0px 16px rgb(0 42 61 / 16%);
+    margin: 0 -12px;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.sum {
+    color: #717273;
+    font-size: 16px;
+}
+.ahihi {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    width: 92%;
+    margin-bottom: 10px;
+    height: 46px;
+}
+
 .cart {
     right: 0;
     max-width: 396px;
@@ -26,14 +154,17 @@
     font-weight: 800;
     font-size: 1.6rem;
 }
+
 @media only screen and (max-width: 46.1875em) {
-    .cart {
+    .cart,
+    .wrapper {
         display: none;
     }
 }
 
 @media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
-    .cart {
+    .cart,
+    .wrapper {
         display: none;
     }
 }
